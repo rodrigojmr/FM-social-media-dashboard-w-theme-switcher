@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-theme">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="container">
+  <div class="header">
+    <h1 class="heading">Social Media Dashboard</h1>
+    <p class="header__text">Total Followers: 23,004</p>
+    <div class="toggle">
+      <p class="toggle__text">Dark Mode</p>
+      <label for="switch" class="toggle__label">
+        <input type="checkbox" id="switch" class="toggle__input" onchange="toggleTheme()">
+        <span class="toggle__slider"></span>
+      </label>
+    </div>
+  </div>
+  <section class="profiles">
+    <div class="profile-card profile-card--fb">
+      <div class="profile-card__identifier">
+        <img class="profile-card__logo" src="images/icon-facebook.svg">
+        <p class="profile-card__name">@nathanf</p>
+      </div>
+      <p class="profile-card__follower-count">1987</p>
+      <p class="profile-card__follower-text">Followers</p>
+      <div class="profile-card__today-stats profile-card__today-stats--up">
+        <img class="profile-card__stats-icon" src="images/icon-up.svg">
+        <p class="profile-card__stats-text">12 Today</p>
+      </div>
+    </div>
+    <div class="profile-card profile-card--twit">
+      <div class="profile-card__identifier">
+        <img class="profile-card__logo" src="images/icon-twitter.svg">
+        <p class="profile-card__name">@nathanf</p>
+      </div>
+      <p class="profile-card__follower-count">1044</p>
+      <p class="profile-card__follower-text">Followers</p>
+      <div class="profile-card__today-stats profile-card__today-stats--up">
+        <img class="profile-card__stats-icon" src="images/icon-up.svg">
+        <p class="profile-card__stats-text">99 Today</p>
+      </div>
+    </div>
+    <div class="profile-card profile-card--inst">
+      <div class="profile-card__identifier">
+        <img class="profile-card__logo" src="images/icon-instagram.svg">
+        <p class="profile-card__name">@realnathanf</p>
+      </div>
+      <p class="profile-card__follower-count">11k</p>
+      <p class="profile-card__follower-text">Followers</p>
+      <div class="profile-card__today-stats profile-card__today-stats--up">
+        <img class="profile-card__stats-icon" src="images/icon-up.svg">
+        <p class="profile-card__stats-text">1099 Today</p>
+      </div>
+    </div>
+    <div class="profile-card profile-card--yt">
+      <div class="profile-card__identifier">
+        <img class="profile-card__logo" src="images/icon-youtube.svg">
+        <p class="profile-card__name">Nathan F.</p>
+      </div>
+      <p class="profile-card__follower-count">8239</p>
+      <p class="profile-card__follower-text">Followers</p>
+      <div class="profile-card__today-stats profile-card__today-stats--down">
+        <img class="profile-card__stats-icon" src="images/icon-down.svg">
+        <p class="profile-card__stats-text">144 Today</p>
+      </div>
+    </div>
+  </section>
+  <section class="overview">
+    <h1 class="heading overview__heading">Overview - Today</h1>
+    <div class="stats-card">
+      <h3 class="stats-card__text">Page Views</h3>
+      <img src="/images/icon-facebook.svg" class="stats-card__logo">
+      <p class="stats-card__number">87</p>
+      <p class="stats-card__percentage stats-card__percentage--up">3%</p>
+    </div>
+    <div class="stats-card">
+      <h3 class="stats-card__text">Likes</h3>
+      <img src="/images/icon-facebook.svg" class="stats-card__logo">
+      <p class="stats-card__number">87</p>
+      <p class="stats-card__percentage stats-card__percentage--down">3%</p>
+    </div>
+    <div class="stats-card">
+      <h3 class="stats-card__text">Likes</h3>
+      <img src="/images/icon-instagram.svg" class="stats-card__logo">
+      <p class="stats-card__number">87</p>
+      <p class="stats-card__percentage stats-card__percentage--up">3%</p>
+    </div>
+    <div class="stats-card">
+      <h3 class="stats-card__text">Profile Views</h3>
+      <img src="/images/icon-instagram.svg" class="stats-card__logo">
+      <p class="stats-card__number">87</p>
+      <p class="stats-card__percentage stats-card__percentage--up">3%</p>
+    </div>
+    <div class="stats-card">
+      <h3 class="stats-card__text">Retweets</h3>
+      <img src="/images/icon-twitter.svg" class="stats-card__logo">
+      <p class="stats-card__number">87</p>
+      <p class="stats-card__percentage stats-card__percentage--up">3%</p>
+    </div>
+    <div class="stats-card">
+      <h3 class="stats-card__text">Likes</h3>
+      <img src="/images/icon-twitter.svg" class="stats-card__logo">
+      <p class="stats-card__number">87</p>
+      <p class="stats-card__percentage stats-card__percentage--up">3%</p>
+    </div>
+    <div class="stats-card">
+      <h3 class="stats-card__text">Likes</h3>
+      <img src="/images/icon-youtube.svg" class="stats-card__logo">
+      <p class="stats-card__number">87</p>
+      <p class="stats-card__percentage stats-card__percentage--down">3%</p>
+    </div>
+    <div class="stats-card">
+      <h3 class="stats-card__text">Total Views</h3>
+      <img src="/images/icon-youtube.svg" class="stats-card__logo">
+      <p class="stats-card__number">87</p>
+      <p class="stats-card__percentage stats-card__percentage--down">3%</p>
+    </div>
+  </section>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io/profile/rodrigojmr" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Rodrigo Moura</a>.
+  </div>
+  <script>
+     // function to set a given theme/color-scheme
+     function setTheme(themeName) {
+            localStorage.setItem('theme', themeName);
+            document.documentElement.className = themeName;
+        }
+
+        // function to toggle between dark and dark theme
+        function toggleTheme() {
+            if (localStorage.getItem('theme') === 'theme-dark') {
+                setTheme('theme-light');
+            } else {
+                setTheme('theme-dark');
+            }
+        }
+
+        // Immediately invoked function to set the theme on initial load
+        (function () {
+            if (localStorage.getItem('theme') === 'theme-light') {
+                setTheme('theme-light');
+                document.getElementById('switch').checked = false;
+            } else {
+                setTheme('theme-dark');
+              document.getElementById('switch').checked = true;
+            }
+        })();
+      </script>
+</body>
+</html>
